@@ -1,0 +1,101 @@
+footer {
+  width: 100%;
+  padding: 3% 0 3% 0;
+}
+.footer-wrapper {
+  background: var(--theme-color);
+  padding: 30px 0;
+}
+.footer-top-bar {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: nowrap;
+}
+.footer-top-logo {
+  width: 120px;
+  line-height: 0;
+}
+@media (min-width: 768px) {
+  .footer-top-logo {
+    width: 32%;
+  }
+}
+@media (min-width: 992px) {
+  .footer-top-logo {
+    max-width: 170px;
+    width: 40%;
+  }
+}
+.footer-time-zone {
+  position: relative;
+  padding: 0 0 0 35px;
+}
+.footer-time-zone::before {
+  content: "";
+  position: absolute;
+  background: url(https://surreysteels.netlify.app/images/watch.svg);
+  background-repeat: no-repeat;
+  width: 28px;
+  height: 28px;
+  left: 1%;
+  top: 14%;
+}
+.footer-bottom-bar .container {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: nowrap;
+  padding-top: 2%;
+}
+@media (max-width: 768px) {
+  .footer-top-bar {
+    flex-direction: column;
+    justify-content: space-around;
+  }
+  .footer-time-zone {
+    padding: 20px 0 0 35px;
+  }
+  .footer-time-zone::before {
+    left: 0%;
+    top: 41%;
+  }
+  .footer-bottom-bar .container {
+    flex-wrap: wrap;
+    justify-content: space-around;
+    padding: 3% 0;
+  }
+  .bottom-bar-text {
+    padding-top: 10px;
+  }
+}
+.bottom-bar-image {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: nowrap;
+}
+.bottom-image {
+  width: 40px;
+  padding-right: 15px;
+}
+.bottom-bar-text {
+  color: var(--text-color_reverce);
+}
+/****** On Top Button  ********/
+#myBtn {
+  position: fixed;
+  bottom: 20px;
+  right: 40px;
+  z-index: 99;
+  border: none;
+  color: #fff;
+  background: rgba(246, 146, 30, 0.9);
+  padding: 10px;
+  border-radius: 10px;
+}
+#myBtn:hover {
+  background: #606060;
+}

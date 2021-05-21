@@ -1,0 +1,278 @@
+.testimonial {
+  width: 100%;
+  padding: 3% 0 3% 0;
+  background: var(--theme-color);
+}
+@media (min-width: 768px) {
+  .testimornial_wrapper {
+    display: grid;
+    grid-template-columns: repeat(12, 1fr);
+    grid-template-rows: auto;
+  }
+  .testimonial-slider {
+    grid-column: 7/-1;
+  }
+}
+@media (max-width: 768px) {
+  .testimonial-slider {
+    height: 50vh;
+  }
+}
+
+.testimonial-logo-title {
+  font-weight: 800;
+  font-size: 25px;
+  line-height: 35px;
+  color: var(--text-color);
+  margin-bottom: 2rem;
+}
+@media (max-width: 768px) {
+  .testimonial-logo-title {
+    white-space: nowrap;
+  }
+}
+@media (min-width: 768px) {
+  .testimonial-logo-title {
+    grid-column: 1/7;
+    margin-bottom: 2rem;
+  }
+  .testimonial-logo-area {
+    justify-content: flex-start;
+    grid-column: 1/6;
+  }
+}
+.testimonial-logo-area {
+  margin: 1.5rem 0;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+.testimonial-logo {
+  margin: 0 0.7rem 0.7rem 0;
+  margin-left: 0;
+  width: 42%;
+  height: auto;
+  border: 1px solid rgba(255, 255, 255, 0.8);
+  border-radius: 4px;
+  color: #fff;
+  text-align: center;
+}
+.testimonial-logo img {
+  height: 100%;
+  object-fit: fill;
+}
+
+/*slider css*/
+
+.slider {
+  height: 100%;
+  position: relative;
+  overflow: hidden;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-flow: row nowrap;
+  -ms-flex-flow: row nowrap;
+  flex-flow: row nowrap;
+  -webkit-box-align: end;
+  -webkit-align-items: flex-end;
+  -ms-flex-align: end;
+  align-items: flex-end;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: flex-end;
+}
+/*.slider-dot-bar {
+  position: absolute;
+  bottom: 51px;
+  right: 0;
+}*/
+.slider__nav {
+  width: 12px;
+  height: 12px;
+  margin: 2rem 12px;
+  border-radius: 50%;
+  z-index: 10;
+  outline: 6px solid #ccc;
+  outline-offset: -6px;
+  box-shadow: 0 0 0 0 #333, 0 0 0 0 rgba(51, 51, 51, 0);
+  cursor: pointer;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  -webkit-backface-visibility: hidden;
+  backface-visibility: hidden;
+}
+.slider__nav:checked {
+  -webkit-animation: check 0.4s linear forwards;
+  animation: check 0.4s linear forwards;
+}
+.slider__nav:checked:nth-of-type(1) ~ .slider__inner {
+  left: 0%;
+}
+.slider__nav:checked:nth-of-type(2) ~ .slider__inner {
+  left: -100%;
+}
+.slider__nav:checked:nth-of-type(3) ~ .slider__inner {
+  left: -200%;
+}
+.slider__nav:checked:nth-of-type(4) ~ .slider__inner {
+  left: -300%;
+}
+.slider__inner {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 400%;
+  height: 100%;
+  -webkit-transition: left 0.4s;
+  transition: left 0.4s;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-flow: row nowrap;
+  -ms-flex-flow: row nowrap;
+  flex-flow: row nowrap;
+}
+.slider__contents {
+  height: 100%;
+  padding: 1rem;
+  text-align: center;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  position: relative;
+  -webkit-box-flex: 1;
+  -webkit-flex: 1;
+  -ms-flex: 1;
+  flex: 1;
+  -webkit-flex-flow: column nowrap;
+  -ms-flex-flow: column nowrap;
+  flex-flow: column nowrap;
+  -webkit-box-align: center;
+  -webkit-align-items: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+}
+@media (max-width: 768px) {
+  .slider__contents {
+    padding: 0;
+  }
+}
+/*
+.slider__image {
+  font-size: 2.7rem;
+  color: #2196f3;
+}*/
+.slider__caption {
+  position: absolute;
+  bottom: 10%;
+  left: 0;
+  font-weight: 500;
+  margin: 2rem 0 1rem;
+  padding-left: 55px;
+  text-shadow: 0 1px 1px rgba(0, 0, 0, 0.1);
+  text-transform: uppercase;
+}
+.slider__contents:nth-of-type(1) > h2::before {
+  content: "";
+  position: absolute;
+  background: url(https://surreysteels.netlify.app/images/johndoe.png);
+  background-repeat: no-repeat;
+  width: 45px;
+  height: 45px;
+  left: 7px;
+  top: -8px;
+}
+
+.slider__contents:nth-of-type(2) > h2::before {
+  content: "";
+  position: absolute;
+  background: url(https://c2.staticflickr.com/8/7310/buddyicons/24846422@N06_r.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  width: 45px;
+  height: 45px;
+  left: 7px;
+  top: -8px;
+}
+
+.slider__contents:nth-of-type(3) > h2::before {
+  content: "";
+  position: absolute;
+  background: url(https://res.cloudinary.com/hnmqik4yn/image/upload/c_fill,fl_force_strip,h_128,q_100,w_128/v1493982718/ah57hnfnwxkmsciwivve.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  width: 45px;
+  height: 45px;
+  left: 7px;
+  top: -8px;
+}
+
+.slider__contents:nth-of-type(4) > h2::before {
+  content: "";
+  position: absolute;
+  background: url(https://surreysteels.netlify.app/images/johndoe.png);
+  background-repeat: no-repeat;
+  width: 45px;
+  height: 45px;
+  left: 7px;
+  top: -8px;
+}
+
+.slider__txt {
+  font-weight: 600;
+  font-size: 18px;
+  line-height: 16px;
+  padding-left: 0rem;
+}
+.slider__txt::before {
+  content: "";
+  background: url(https://surreysteels.netlify.app/images/quote.svg);
+  width: 89px;
+  height: 64px;
+  position: absolute;
+  top: 2%;
+  left: 0;
+}
+@media (min-width: 768px) {
+  .slider__txt {
+    position: relative;
+    font-weight: 800;
+    font-size: 25px;
+    line-height: 25px;
+    color: #999;
+    flex: auto;
+    margin: 3rem 0 7rem 0;
+    padding-left: 5rem;
+  }
+}
+@-webkit-keyframes check {
+  50% {
+    outline-color: #333;
+    box-shadow: 0 0 0 12px #333, 0 0 0 36px rgba(51, 51, 51, 0.2);
+  }
+  100% {
+    outline-color: #333;
+    box-shadow: 0 0 0 0 #333, 0 0 0 0 rgba(51, 51, 51, 0);
+  }
+}
+
+@keyframes check {
+  50% {
+    outline-color: #333;
+    box-shadow: 0 0 0 12px #333, 0 0 0 36px rgba(51, 51, 51, 0.2);
+  }
+  100% {
+    outline-color: #333;
+    box-shadow: 0 0 0 0 #333, 0 0 0 0 rgba(51, 51, 51, 0);
+  }
+}

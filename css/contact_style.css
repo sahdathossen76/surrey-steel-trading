@@ -1,0 +1,238 @@
+.contact-are {
+  width: 100%;
+  padding: 3% 0 3% 0;
+  background: var(--text-color);
+}
+.contact-map,
+.contact-info-area {
+  margin-top: 25px 0;
+  box-shadow: 0 2px 7px rgba(0, 0, 0, 0.3);
+}
+.contact-heading-1 {
+  padding: 20px 0;
+  font-size: 25px;
+  color: var(--text-color_reverce);
+}
+.contact-header-info {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  justify-content: space-evenly;
+}
+.contact-info-phone {
+  width: 100%;
+  position: relative;
+  border: 1px solid salmon;
+  text-align: center;
+  background: bisque;
+  padding: 3% 0 3% 10%;
+}
+.contact-info-mail {
+  width: 100%;
+  position: relative;
+  box-shadow: 0 2px 3px rgba(0, 0, 0, 0.1);
+  text-align: center;
+  padding: 3% 0 3% 12%;
+}
+.contact-info-phone::before {
+  content: "";
+  position: absolute;
+  background: url(https://surreysteels.netlify.app/images/phone-icon-yellow.svg);
+  background-repeat: no-repeat;
+  width: 19px;
+  height: 18px;
+  left: 2%;
+  top: 39%;
+}
+.contact-info-mail::before {
+  content: "";
+  position: absolute;
+  background: url(https://surreysteels.netlify.app/images/mail-yellow.svg);
+  background-repeat: no-repeat;
+  width: 22px;
+  height: 20px;
+  left: 2%;
+  top: 39%;
+}
+.contact-1,
+.contact-2 {
+  color: var(--text-color_reverce);
+  float: left;
+}
+.contact-1 {
+  font-size: 15px;
+  line-height: 23px;
+}
+@media (min-width: 768px) {
+  .contact-1 {
+    font-weight: 600;
+    font-size: 25px;
+    line-height: 20px;
+  }
+}
+.contact-2 {
+  font-size: 12px;
+  line-height: 10px;
+}
+@media (min-width: 768px) {
+  .contact-2 {
+    font-weight: 400;
+    font-size: 18px;
+    line-height: 15px;
+  }
+}
+.contact-map {
+  height: 350px;
+  overflow: hidden;
+}
+@media (min-width: 768px) {
+  .contact-map {
+    height: 91%;
+  }
+}
+.contact-map .contact-heading-2 {
+  padding: 25px;
+}
+.contact-heading-2 {
+  font-size: 15px;
+  color: var(--text-color_reverce);
+}
+#map {
+  height: 76%;
+  width: 100%;
+}
+@media (min-width: 768px) {
+  #map {
+    height: 83%;
+  }
+}
+@media (min-width: 992px) {
+  #map {
+    height: 83%;
+  }
+}
+@media (min-width: 768px) {
+  .contact-are-warpper {
+    display: grid;
+    grid-template-columns: repeat(12, 1fr);
+    grid-template-rows: auto;
+    grid-gap: 1.5rem;
+  }
+  .contact-form-area {
+    grid-column: 1/7;
+  }
+  .contact-map-area {
+    grid-column: 7/-1;
+  }
+  .contact-heading-1 {
+    padding: 10px 0;
+    font-weight: 700;
+    font-size: 28x;
+    line-height: 35px;
+  }
+  .contact-heading-2 {
+    font-weight: 500;
+    font-size: 20px;
+    line-height: 23px;
+  }
+}
+
+/* Form */
+.form-container {
+  background-color: #fff;
+  border-radius: 5px;
+  overflow: hidden;
+  width: 100%;
+}
+
+.form-header {
+  background-color: #f7f7f7;
+  margin: 20px 40px;
+}
+
+.header h2 {
+  margin: 0;
+}
+
+.form {
+  margin: 20px 40px;
+}
+
+.form-control {
+  margin-bottom: 6px;
+  padding-bottom: 10px;
+  position: relative;
+}
+
+.form-control label {
+  display: inline-block;
+  margin-bottom: 5px;
+}
+
+.form-control input {
+  border: 2px solid #f0f0f0;
+  border-radius: 4px;
+  display: block;
+  font-family: inherit;
+  font-size: 14px;
+  padding: 10px;
+  width: 100%;
+}
+
+.form-control input:focus {
+  outline: 0;
+  border-color: #777;
+}
+
+.form-control.success input {
+  border-color: #2ecc71;
+}
+
+.form-control.error input {
+  border-color: #e74c3c;
+}
+form .form-control:nth-of-type(4) input {
+  height: 55px;
+}
+.form-control i {
+  visibility: hidden;
+  position: absolute;
+  top: 40px;
+  right: 10px;
+}
+
+.form-control.success i.fa-check-circle {
+  color: #2ecc71;
+  visibility: visible;
+}
+
+.form-control.error i.fa-exclamation-circle {
+  color: #e74c3c;
+  visibility: visible;
+}
+
+.form-control small {
+  color: #e74c3c;
+  position: absolute;
+  bottom: -5px;
+  left: 0;
+  visibility: hidden;
+}
+
+.form-control.error small {
+  visibility: visible;
+}
+
+.form button {
+  background-color: #8e44ad;
+  border: 2px solid #8e44ad;
+  color: #fff;
+  display: block;
+  font-family: inherit;
+  font-size: 16px;
+  padding: 10px;
+  margin-top: 20px;
+  width: 100%;
+  cursor: pointer;
+  border-radius: 5px;
+}
